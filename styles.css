@@ -21,6 +21,7 @@
     align-self: center;
     margin-left: 40vw;
     margin-top: 15vw;
+    
 }
 
 /* styles each row in calculator */
@@ -31,6 +32,10 @@
 }
 
 /* styles each item in the grid */
+.grid-item, #clear {
+    background-color: rgb(69, 183, 69);
+}
+
 .grid-item, .grid-item1 {
     border: 1px solid rgb(167, 167, 167);
     text-align: center;
@@ -44,4 +49,8 @@
 /* styles the hover over each button */
 .grid-item:hover {
     background-color: rgb(102, 229, 102);
+}
+
+#multiply:hover, #subtract:hover, #divide:hover, #addition:hover {
+    background-color: rgb(178, 196, 211);
 }
