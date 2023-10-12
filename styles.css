@@ -2,7 +2,7 @@
 .grid1{
     display: grid;
     grid-template-columns: 25% 75%;
-    border: 5px solid black;
+    /* border: 5px solid black; */
 }
 
 #display {
@@ -14,8 +14,8 @@
 .calc {
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
-    border: 5px solid pink;
-    height: 40vh;
+    /* border: 5px solid pink; */
+    /* height: 50vh; */
     width: 20vw;
     align-items: center;
     align-self: center;
@@ -26,14 +26,22 @@
 /* styles each row in calculator */
 .grid-row {
     display: grid;
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     grid-template-columns: 25% 25% 25% 25%;
 }
 
 /* styles each item in the grid */
-.grid-item {
+.grid-item, .grid-item1 {
     border: 1px solid rgb(167, 167, 167);
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: xx-large;
+}
+.grid-item1, #multiply, #subtract, #divide, #addition {
+    background-color: rgb(102, 229, 102);
+}
 
+/* styles the hover over each button */
+.grid-item:hover {
+    background-color: rgb(102, 229, 102);
 }
