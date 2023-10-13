@@ -43,7 +43,7 @@
     font-size: xx-large;
 }
 .grid-item1, #multiply, #subtract, #divide, #addition {
-    background-color: rgb(102, 229, 102);
+    background-color: rgb(4, 21, 4);
 }
 
 /* styles the hover over each button */
@@ -52,5 +52,10 @@
 }
 
 #multiply:hover, #subtract:hover, #divide:hover, #addition:hover {
+    background-color: rgb(178, 196, 211);
+}
+
+/* changes color of operators selected */
+.selected {
     background-color: rgb(178, 196, 211);
 }
