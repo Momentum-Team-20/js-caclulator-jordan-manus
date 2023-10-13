@@ -1,11 +1,10 @@
+// const math = require("mathjs");
+
 console.log('connected');
 
-let display = document.querySelector('#display');
-let mainContainer = document.querySelector('.bottom');
+
 let string = "";
 
-let newDisplay = 5;
-display.innerText = 'hello';
 
 let numbers = document.querySelectorAll('.number');
 for (let number of numbers) {
@@ -22,19 +21,29 @@ for (let operator of operators) {
     operator.addEventListener('click', (event) => {
         console.log(event.target.innerText);
         operator = event.target.innerText;
+        
+        if (operator === '=') {
+            calculateEquation(string);
+        }
         string += operator;
         console.log(`this is the string: ${string}`);
-
     })
 }
 
 
-// function to assign values to button
-// function defineValueToButton(element) {
-//     switch()
-// }
+function calculateEquation(string) {
+    let results = math.evaluate(string);
+    // results = String(results)
+    console.log(results);
+    setDisplay(results);
+}
 
-
-
+function setDisplay(results) {
+    let display = document.querySelector('#display');
+    console.log(`this is results: ${results}`);
+    // display.innerText(results);
+    display.innerHTML(results);
+}
 
 // how to clear the calculator: element_name.remove();
+
